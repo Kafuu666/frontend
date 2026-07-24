@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Progress & Meter</title>
+</head>
+
+<body>
+
+    <h1>Belajar Progress & Meter</h1>
+
+    <hr>
+
+    <!-- Progress -->
+    <h2>1. Progress Bar</h2>
+    <p>Proses Upload File:</p>
+
+    <progress value="70" max="100"></progress>
+    <p>70% Selesai</p>
+
+    <hr>
+
+    <!-- Meter -->
+    <h2>2. Meter (Tingkat Baterai)</h2>
+    <p>Status Baterai:</p>
+
+    <meter value="0.7" min="0" max="1" low="0.3" high="0.7" optimum="0.8">
+        70%
+    </meter>
+
+    <hr>
+
+    <!-- Details & Summary -->
+    <h2>3. Details & Summary</h2>
+
+    <details>
+        <summary>Klik untuk melihat informasi</summary>
+
+        <p>
+            HTML menyediakan elemen
+            <strong>details</strong> dan
+            <strong>summary</strong> untuk membuat
+            konten yang dapat dibuka dan ditutup tanpa JavaScript.
+        </p>
+    </details>
+
+    <hr>
+
+    <!-- Datalist -->
+    <h2>4. Datalist</h2>
+
+    <label for="browser">Pilih Browser:</label><br><br>
+
+    <input type="text" id="browser" list="browsers" placeholder="Ketik browser...">
+
+    <datalist id="browsers">
+        <option value="Google Chrome">
+        <option value="Mozilla Firefox">
+        <option value="Microsoft Edge">
+        <option value="Safari">
+        <option value="Opera">
+    </datalist>
+
+</body>
+
+</html>

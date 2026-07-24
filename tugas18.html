@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Validasi Form HTML5</title>
+</head>
+
+<body>
+
+    <h1>Form Pendaftaran</h1>
+
+    <form action="#" method="post">
+
+        <!-- Nama -->
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama" required minlength="3" maxlength="50"
+            placeholder="Masukkan nama lengkap" autocomplete="name">
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+        <br><br>
+
+        <!-- Umur -->
+        <label for="umur">Umur:</label><br>
+        <input type="number" id="umur" name="umur" min="1" max="100" step="1">
+        <br><br>
+
+        <!-- Username -->
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" pattern="[A-Za-z]{3,}"
+            title="Username minimal 3 huruf dan hanya boleh huruf." placeholder="Masukkan username">
+        <br><br>
+
+        <!-- Website -->
+        <label for="website">Website:</label><br>
+        <input type="url" id="website" name="website" placeholder="https://contoh.com">
+        <br><br>
+
+        <button type="submit">Kirim</button>
+
+    </form>
+
+</body>
+
+</html>

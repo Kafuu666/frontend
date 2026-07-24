@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Data Attributes</title>
+</head>
+
+<body>
+
+    <h1>Belajar Data Attributes</h1>
+
+    <!-- Menyimpan data pengguna -->
+    <div id="user" data-user-id="123" data-role="admin">
+        User Admin
+    </div>
+
+    <br>
+
+    <!-- Tombol -->
+    <button id="btnHapus" data-action="delete" data-id="42">
+        Hapus
+    </button>
+
+    <hr>
+
+    <p id="hasil"></p>
+
+    <script>
+        // Mengambil data dari div
+        const user = document.getElementById("user");
+
+        const userId = user.dataset.userId;
+        const role = user.dataset.role;
+
+        document.getElementById("hasil").innerHTML =
+            "User ID: " + userId + "<br>" +
+            "Role: " + role;
+
+        // Mengambil data dari tombol saat diklik
+        const tombol = document.getElementById("btnHapus");
+
+        tombol.addEventListener("click", function () {
+            const action = this.dataset.action;
+            const id = this.dataset.id;
+
+            alert("Action: " + action + "\nID: " + id);
+        });
+    </script>
+
+</body>
+
+</html>

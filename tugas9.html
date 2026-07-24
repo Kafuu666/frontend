@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Form HTML - Bagian 2</title>
+</head>
+
+<body>
+
+    <h1>Form Data Pribadi</h1>
+
+    <form action="/submit" method="POST">
+
+        <fieldset>
+            <legend>Data Pribadi</legend>
+
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="pesan">Pesan:</label><br>
+            <textarea id="pesan" name="pesan" rows="5" cols="40"></textarea>
+            <br><br>
+
+            <label for="kota">Pilih Kota:</label><br>
+            <select id="kota" name="kota">
+                <option value="">-- Pilih Kota --</option>
+                <option value="jakarta">Jakarta</option>
+                <option value="bandung">Bandung</option>
+                <option value="surabaya">Surabaya</option>
+                <option value="yogyakarta">Yogyakarta</option>
+            </select>
+
+            <br><br>
+
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="pria" name="gender" value="Pria">
+            <label for="pria">Pria</label>
+
+            <input type="radio" id="wanita" name="gender" value="Wanita">
+            <label for="wanita">Wanita</label>
+
+            <br><br>
+
+            <input type="checkbox" id="setuju" name="setuju">
+            <label for="setuju">
+                Saya setuju dengan syarat dan ketentuan
+            </label>
+
+            <br><br>
+
+            <button type="submit">Kirim</button>
+
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>

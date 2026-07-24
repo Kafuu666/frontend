@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML Accessibility</title>
+</head>
+
+<body>
+
+    <!-- Skip Navigation -->
+    <a href="#main-content">Langsung ke Konten</a>
+
+    <hr>
+
+    <!-- Header -->
+    <header>
+        <h1>Website Belajar HTML</h1>
+
+        <!-- Navigasi -->
+        <nav aria-label="Menu Utama">
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Tombol -->
+    <button aria-expanded="false" aria-controls="menu">
+        Menu
+    </button>
+
+    <hr>
+
+    <!-- Konten Utama -->
+    <main id="main-content">
+
+        <h2>Profil</h2>
+
+        <!-- Gambar -->
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
+            alt="Seorang wanita sedang tersenyum di depan kamera" width="300">
+
+        <p>
+            Gambar di atas memiliki atribut <strong>alt</strong>
+            sehingga dapat dijelaskan oleh screen reader jika gambar
+            tidak dapat ditampilkan.
+        </p>
+
+        <hr>
+
+        <!-- Form -->
+        <form>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" aria-required="true" required>
+
+            <br><br>
+
+            <button type="submit">Kirim</button>
+
+        </form>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Belajar HTML Accessibility</p>
+    </footer>
+
+</body>
+
+</html>
