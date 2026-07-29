@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        /* Block */
+        .block {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            background-color: lightblue;
+            border: 1px solid blue;
+            margin-bottom: 10px;
+        }
+
+        /* Inline */
+        .inline {
+            display: inline;
+            background-color: lightgreen;
+            border: 1px solid green;
+            padding: 5px;
+        }
+
+        /* Inline Block */
+        .inline-block {
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+            background-color: orange;
+            border: 1px solid darkorange;
+            text-align: center;
+            line-height: 50px;
+            margin-right: 10px;
+        }
+
+        /* None */
+        .hidden {
+            display: none;
+        }
+
+        /* Flex */
+        .flex-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .flex-item {
+            background-color: skyblue;
+            padding: 20px;
+            border: 1px solid blue;
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid-item {
+            background-color: pink;
+            padding: 20px;
+            border: 1px solid red;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar CSS Display Property</h1>
+
+    <section>
+        <h2>1. Display: Block</h2>
+
+        <div class="block">Box 1</div>
+        <div class="block">Box 2</div>
+    </section>
+
+    <section>
+        <h2>2. Display: Inline</h2>
+
+        <span class="inline">HTML</span>
+        <span class="inline">CSS</span>
+        <span class="inline">JavaScript</span>
+    </section>
+
+    <section>
+        <h2>3. Display: Inline-Block</h2>
+
+        <div class="inline-block">Tombol 1</div>
+        <div class="inline-block">Tombol 2</div>
+    </section>
+
+    <section>
+        <h2>4. Display: None</h2>
+
+        <p>Paragraf ini terlihat.</p>
+
+        <p class="hidden">
+            Paragraf ini disembunyikan karena menggunakan
+            <strong>display: none;</strong>
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Display: Flex</h2>
+
+        <div class="flex-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Display: Grid</h2>
+
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+    </section>
+
+</body>
+
+</html>

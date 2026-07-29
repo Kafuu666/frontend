@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengenalan CSS</title>
+
+    <style>
+        /* CSS untuk h1 */
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        /* CSS untuk h2 */
+        h2 {
+            color: green;
+            text-align: center;
+        }
+
+        /* CSS untuk paragraf */
+        p {
+            color: gray;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        /* CSS untuk class external */
+        .external {
+            color: purple;
+            text-align: center;
+        }
+
+        .external-text {
+            color: darkorange;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Pengenalan CSS</h1>
+
+    <hr>
+
+    <h2>1. Inline CSS</h2>
+
+    <p style="color: blue; font-size: 20px;">
+        Paragraf ini menggunakan <strong>Inline CSS</strong>.
+        Style ditulis langsung pada atribut <code>style</code>.
+    </p>
+
+    <hr>
+
+    <h2>2. Internal CSS</h2>
+
+    <p>
+        Judul dan paragraf ini menggunakan <strong>Internal CSS</strong>
+        yang ditulis di dalam tag <code>&lt;style&gt;</code>.
+    </p>
+
+    <hr>
+
+    <h2 class="external">3. External CSS</h2>
+
+    <p class="external-text">
+        Contoh ini sebenarnya menggunakan class yang biasanya ditulis
+        pada file <code>style.css</code>. Namun, pada latihan ini CSS
+        digabungkan ke dalam tag <code>&lt;style&gt;</code>.
+    </p>
+
+</body>
+
+</html>

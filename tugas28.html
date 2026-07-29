@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        /* px */
+        .px-box {
+            width: 200px;
+            background-color: lightblue;
+            padding: 10px;
+            border: 2px solid blue;
+        }
+
+        /* % */
+        .parent {
+            width: 400px;
+            border: 2px dashed gray;
+            padding: 10px;
+        }
+
+        .percent-box {
+            width: 50%;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+
+        /* em */
+        .em-text {
+            font-size: 1.5em;
+            color: darkgreen;
+        }
+
+        /* rem */
+        .rem-text {
+            font-size: 2rem;
+            color: darkblue;
+        }
+
+        /* vw */
+        .vw-box {
+            width: 50vw;
+            background-color: orange;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        /* vh */
+        .vh-box {
+            height: 30vh;
+            background-color: pink;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        /* vmin */
+        .vmin-box {
+            width: 40vmin;
+            height: 40vmin;
+            background-color: violet;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar CSS Units</h1>
+
+    <section>
+        <h2>1. Pixel (px)</h2>
+
+        <div class="px-box">
+            Lebar box = 200px
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Persen (%)</h2>
+
+        <div class="parent">
+            Parent Width = 400px
+
+            <div class="percent-box">
+                Lebar = 50% dari parent
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. EM</h2>
+
+        <p class="em-text">
+            Font ini menggunakan ukuran 1.5em.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. REM</h2>
+
+        <p class="rem-text">
+            Font ini menggunakan ukuran 2rem.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Viewport Width (vw)</h2>
+
+        <div class="vw-box">
+            Lebar = 50vw
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Viewport Height (vh)</h2>
+
+        <div class="vh-box">
+            Tinggi = 30vh
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Viewport Minimum (vmin)</h2>
+
+        <div class="vmin-box">
+            Ukuran = 40vmin
+        </div>
+    </section>
+
+</body>
+
+</html>

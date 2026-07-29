@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <style>
+        /* Element Selector */
+        p {
+            color: gray;
+        }
+
+        /* Class Selector */
+        .card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* ID Selector */
+        #header {
+            background-color: navy;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Descendant Selector */
+        nav a {
+            text-decoration: none;
+            color: green;
+            margin-right: 15px;
+        }
+
+        /* Child Selector */
+        ul>li {
+            list-style: none;
+            color: blue;
+        }
+
+        /* Pseudo-class */
+        a:hover {
+            color: red;
+        }
+
+        li:first-child {
+            font-weight: bold;
+        }
+
+        input:focus {
+            border: 2px solid blue;
+            outline: none;
+        }
+
+        .daftar p:nth-child(odd) {
+            background-color: #f0f0f0;
+        }
+
+        /* Pseudo-element */
+        p::first-letter {
+            font-size: 2em;
+            color: darkblue;
+        }
+
+        p::before {
+            content: "→ ";
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <h1>Belajar CSS Selectors</h1>
+    </div>
+
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Profil</a>
+        <a href="#">Kontak</a>
+    </nav>
+
+    <hr>
+
+    <div class="card">
+        <h2>Class Selector</h2>
+        <p>Paragraf ini berada di dalam class <strong>card</strong>.</p>
+    </div>
+
+    <h2>Child Selector</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <hr>
+
+    <h2>Pseudo-class :focus</h2>
+    <input type="text" placeholder="Klik di sini">
+
+    <hr>
+
+    <h2>Pseudo-class :nth-child()</h2>
+    <div class="daftar">
+        <p>Paragraf Pertama</p>
+        <p>Paragraf Kedua</p>
+        <p>Paragraf Ketiga</p>
+        <p>Paragraf Keempat</p>
+    </div>
+
+</body>
+
+</html>

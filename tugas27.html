@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 70px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        /* Static */
+        .static {
+            position: static;
+            background-color: lightblue;
+            padding: 15px;
+            border: 2px solid blue;
+            margin-bottom: 15px;
+        }
+
+        /* Relative */
+        .relative {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            background-color: lightgreen;
+            padding: 15px;
+            border: 2px solid green;
+            width: 220px;
+            margin-bottom: 30px;
+        }
+
+        /* Parent untuk Absolute */
+        .parent {
+            position: relative;
+            width: 350px;
+            height: 180px;
+            background-color: #ddd;
+            border: 2px solid #555;
+            margin-top: 20px;
+        }
+
+        /* Absolute */
+        .absolute {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: orange;
+            padding: 10px;
+            border: 2px solid darkorange;
+        }
+
+        /* Fixed */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: navy;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 100;
+        }
+
+        /* Sticky */
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: crimson;
+            color: white;
+            padding: 10px;
+        }
+
+        .content {
+            height: 700px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed -->
+    <div class="navbar">
+        Navigation Bar (Position: Fixed)
+    </div>
+
+    <h1>Belajar CSS Positioning</h1>
+
+    <section>
+        <h2>1. Position: Static</h2>
+        <div class="static">
+            Ini adalah elemen dengan <strong>position: static</strong>.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Position: Relative</h2>
+        <div class="relative">
+            Elemen ini bergeser 10px ke bawah dan 20px ke kanan.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Position: Absolute</h2>
+
+        <div class="parent">
+            Parent (position: relative)
+
+            <div class="absolute">
+                Position: Absolute
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Position: Sticky</h2>
+
+        <div class="sticky">
+            Saya akan menempel di atas saat halaman di-scroll.
+        </div>
+
+        <div class="content">
+            <p>Scroll ke bawah untuk melihat efek <strong>sticky</strong>.</p>
+            <p>Tambahkan lebih banyak konten agar halaman dapat di-scroll.</p>
+        </div>
+    </section>
+
+</body>
+
+</html>

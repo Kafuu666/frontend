@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow & Visibility</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        /* Box umum */
+        .box {
+            width: 300px;
+            height: 100px;
+            border: 2px solid #333;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #e3f2fd;
+        }
+
+        /* Overflow */
+        .visible {
+            overflow: visible;
+        }
+
+        .hidden {
+            overflow: hidden;
+        }
+
+        .scroll {
+            overflow: scroll;
+        }
+
+        .auto {
+            overflow: auto;
+        }
+
+        /* Visibility */
+        .visibility-hidden {
+            visibility: hidden;
+            background-color: orange;
+            padding: 10px;
+        }
+
+        .display-none {
+            display: none;
+        }
+
+        .opacity-zero {
+            opacity: 0;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+
+        /* Object Fit */
+        .gambar {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar CSS Overflow & Visibility</h1>
+
+    <section>
+        <h2>1. Overflow: Visible (Default)</h2>
+
+        <div class="box visible">
+            Ini adalah contoh overflow visible. Jika isi terlalu panjang maka
+            teks akan keluar dari kotak dan tetap terlihat oleh pengguna.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Overflow: Hidden</h2>
+
+        <div class="box hidden">
+            Konten yang melebihi ukuran kotak akan dipotong dan tidak terlihat
+            karena menggunakan overflow: hidden.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Overflow: Scroll</h2>
+
+        <div class="box scroll">
+            Konten ini cukup panjang sehingga scrollbar selalu muncul,
+            walaupun isi sebenarnya tidak terlalu banyak. Scroll ke bawah
+            untuk membaca seluruh isi kotak ini.
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Overflow: Auto</h2>
+
+        <div class="box auto">
+            Scrollbar hanya muncul jika isi melebihi ukuran kotak. Jika isi
+            pendek maka scrollbar tidak akan ditampilkan.
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Visibility</h2>
+
+        <p>Paragraf pertama terlihat.</p>
+
+        <p class="visibility-hidden">
+            Paragraf ini menggunakan visibility: hidden.
+        </p>
+
+        <p>Paragraf setelah visibility:hidden.</p>
+
+        <p class="display-none">
+            Paragraf ini menggunakan display: none.
+        </p>
+
+        <p>Paragraf setelah display:none.</p>
+
+        <p class="opacity-zero">
+            Paragraf ini menggunakan opacity: 0.
+        </p>
+
+        <p>Paragraf setelah opacity:0.</p>
+    </section>
+
+    <section>
+        <h2>6. Object-Fit</h2>
+
+        <img class="gambar" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Pemandangan Alam">
+    </section>
+
+</body>
+
+</html>
