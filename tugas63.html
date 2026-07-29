@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 63 - Event Listeners</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        #hasil {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>JavaScript Event Listeners</h1>
+
+    <button id="myBtn">
+        Klik Saya
+    </button>
+
+    <br><br>
+
+    <input type="text" id="nama" placeholder="Masukkan nama">
+
+    <br><br>
+
+    <form id="form">
+
+        <input type="text" placeholder="Nama">
+
+        <button type="submit">
+            Kirim
+        </button>
+
+    </form>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        const hasil = document.getElementById("hasil");
+
+        // Click
+        const btn = document.getElementById("myBtn");
+
+        btn.addEventListener("click", (e) => {
+
+            hasil.innerHTML += "<p>Tombol diklik.</p>";
+
+            console.log(e.target);
+
+        });
+
+        // Input
+        const input = document.getElementById("nama");
+
+        input.addEventListener("input", (e) => {
+
+            hasil.innerHTML =
+                `<p>Input : ${e.target.value}</p>`;
+
+        });
+
+        // Submit
+        const form = document.getElementById("form");
+
+        form.addEventListener("submit", (e) => {
+
+            e.preventDefault();
+
+            hasil.innerHTML +=
+                "<p>Form berhasil dikirim.</p>";
+
+        });
+
+        // Scroll
+        window.addEventListener("scroll", () => {
+
+            console.log(window.scrollY);
+
+        });
+
+        // Resize
+        window.addEventListener("resize", () => {
+
+            console.log(window.innerWidth);
+
+        });
+
+        // Keyboard
+        document.addEventListener("keydown", (e) => {
+
+            if (e.key === "Enter") {
+
+                console.log("Enter ditekan");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

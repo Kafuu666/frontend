@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 66 - LocalStorage</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        input {
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-left: 5px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Todo App - LocalStorage</h1>
+
+    <input type="text" id="todoInput" placeholder="Masukkan tugas">
+
+    <button id="addBtn">
+        Tambah
+    </button>
+
+    <ul id="todoList"></ul>
+
+    <script>
+
+        let todos =
+            JSON.parse(localStorage.getItem("todos"))
+            || [];
+
+        const input =
+            document.getElementById("todoInput");
+
+        const list =
+            document.getElementById("todoList");
+
+        function saveTodos() {
+
+            localStorage.setItem(
+                "todos",
+                JSON.stringify(todos)
+            );
+
+        }
+
+        function renderTodos() {
+
+            list.innerHTML = "";
+
+            todos.forEach((todo, index) => {
+
+                list.innerHTML += `
+            <li>
+                ${todo}
+
+                <button onclick="hapusTodo(${index})">
+                    Hapus
+                </button>
+            </li>
+        `;
+
+            });
+
+        }
+
+        function hapusTodo(index) {
+
+            todos.splice(index, 1);
+
+            saveTodos();
+
+            renderTodos();
+
+        }
+
+        document.getElementById("addBtn")
+            .addEventListener("click", () => {
+
+                const text = input.value.trim();
+
+                if (text === "") return;
+
+                todos.push(text);
+
+                saveTodos();
+
+                renderTodos();
+
+                input.value = "";
+
+            });
+
+        renderTodos();
+
+    </script>
+
+</body>
+
+</html>

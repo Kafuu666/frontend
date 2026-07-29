@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 57 - Arrays</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Arrays</h1>
+
+    <button onclick="jalankanArray()">
+        Jalankan Program
+    </button>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        function jalankanArray() {
+
+            const buah = ["Apel", "Mangga", "Jeruk"];
+
+            let output = "<h3>Array Buah</h3>";
+
+            output += `<p>Buah pertama : ${buah[0]}</p>`;
+            output += `<p>Jumlah buah : ${buah.length}</p>`;
+
+            buah.push("Pisang");
+            output += `<p>Setelah push : ${buah.join(", ")}</p>`;
+
+            buah.pop();
+            output += `<p>Setelah pop : ${buah.join(", ")}</p>`;
+
+            buah.unshift("Anggur");
+            output += `<p>Setelah unshift : ${buah.join(", ")}</p>`;
+
+            buah.shift();
+            output += `<p>Setelah shift : ${buah.join(", ")}</p>`;
+
+            const angka = [1, 2, 3, 4, 5];
+
+            output += "<hr>";
+
+            output += `<p>map : ${angka.map(n => n * 2)}</p>`;
+            output += `<p>filter : ${angka.filter(n => n > 3)}</p>`;
+            output += `<p>find : ${angka.find(n => n > 3)}</p>`;
+            output += `<p>reduce : ${angka.reduce((a, b) => a + b, 0)}</p>`;
+            output += `<p>includes(3) : ${angka.includes(3)}</p>`;
+            output += `<p>indexOf(3) : ${angka.indexOf(3)}</p>`;
+
+            const [pertama, kedua] = buah;
+
+            output += "<hr>";
+
+            output += `<p>Destructuring :</p>`;
+            output += `<p>${pertama}</p>`;
+            output += `<p>${kedua}</p>`;
+
+            const [awal, ...sisanya] = buah;
+
+            output += `<p>Sisa Array : ${sisanya.join(", ")}</p>`;
+
+            document.getElementById("hasil").innerHTML = output;
+
+            console.log(buah);
+
+            angka.forEach(n => console.log(n));
+
+        }
+
+    </script>
+
+</body>
+
+</html>

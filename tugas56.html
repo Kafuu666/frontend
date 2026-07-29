@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 56 - Functions</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Functions</h1>
+
+    <button onclick="jalankanFunction()">
+        Jalankan Program
+    </button>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        // Function Declaration
+        function sapa(nama) {
+            return `Halo, ${nama}!`;
+        }
+
+        // Function Expression
+        const tambah = function (a, b) {
+            return a + b;
+        };
+
+        // Arrow Function
+        const kali = (a, b) => a * b;
+
+        const kuadrat = x => x * x;
+
+        const hello = () => "Hello!";
+
+        // Default Parameter
+        const greet = (nama = "Teman") => `Halo, ${nama}!`;
+
+        // Rest Parameter
+        const jumlahkan = (...angka) => {
+            return angka.reduce((total, n) => total + n, 0);
+        };
+
+        function jalankanFunction() {
+
+            document.getElementById("hasil").innerHTML = `
+                <h3>Hasil Function</h3>
+
+                <p>${sapa("Andi")}</p>
+
+                <p>5 + 3 = ${tambah(5, 3)}</p>
+
+                <p>4 × 5 = ${kali(4, 5)}</p>
+
+                <p>Kuadrat 6 = ${kuadrat(6)}</p>
+
+                <p>${hello()}</p>
+
+                <p>${greet()}</p>
+
+                <p>${greet("Budi")}</p>
+
+                <p>Jumlah = ${jumlahkan(1, 2, 3, 4)}</p>
+            `;
+
+            console.log(sapa("Andi"));
+            console.log(tambah(5, 3));
+            console.log(kali(4, 5));
+            console.log(kuadrat(6));
+            console.log(hello());
+            console.log(greet());
+            console.log(jumlahkan(1, 2, 3, 4));
+        }
+
+    </script>
+
+</body>
+
+</html>

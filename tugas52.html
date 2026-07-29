@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 52 - Variables & Data Types</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Variables & Data Types</h1>
+
+    <button onclick="tampilkanData()">
+        Tampilkan Data
+    </button>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        let nama = "Andi";
+        const umur = 25;
+        var kota = "Jakarta";
+
+        let string = "Hello";
+        let number = 42;
+        let decimal = 3.14;
+        let boolean = true;
+        let kosong = null;
+        let belum;
+        let arr = [1, 2, 3];
+        let obj = {
+            nama: "Andi"
+        };
+
+        let greeting = `Halo, nama saya ${nama}, umur ${umur}`;
+
+        console.log(typeof nama);
+        console.log(typeof umur);
+
+        function tampilkanData() {
+
+            document.getElementById("hasil").innerHTML = `
+                <p>${greeting}</p>
+
+                <p><b>Kota:</b> ${kota}</p>
+
+                <p><b>String:</b> ${string}</p>
+
+                <p><b>Number:</b> ${number}</p>
+
+                <p><b>Decimal:</b> ${decimal}</p>
+
+                <p><b>Boolean:</b> ${boolean}</p>
+
+                <p><b>Null:</b> ${kosong}</p>
+
+                <p><b>Undefined:</b> ${belum}</p>
+
+                <p><b>Array:</b> ${arr}</p>
+
+                <p><b>Object:</b> ${obj.nama}</p>
+
+                <hr>
+
+                <p>typeof nama = ${typeof nama}</p>
+
+                <p>typeof umur = ${typeof umur}</p>
+
+            `;
+        }
+
+    </script>
+
+</body>
+
+</html>

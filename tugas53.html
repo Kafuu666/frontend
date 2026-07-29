@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 53 - Operators</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Operators</h1>
+
+    <button onclick="tampilkanHasil()">
+        Tampilkan Hasil
+    </button>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        function tampilkanHasil() {
+
+            let a = 10;
+            let b = 3;
+            let x = 5;
+
+            x++;
+            x--;
+
+            document.getElementById("hasil").innerHTML = `
+                <h3>Operator Aritmatika</h3>
+
+                <p>10 + 3 = ${a + b}</p>
+                <p>10 - 3 = ${a - b}</p>
+                <p>10 × 3 = ${a * b}</p>
+                <p>10 ÷ 3 = ${a / b}</p>
+                <p>10 % 3 = ${a % b}</p>
+                <p>10 ** 3 = ${a ** b}</p>
+
+                <hr>
+
+                <h3>Operator Perbandingan</h3>
+
+                <p>5 == "5" : ${5 == "5"}</p>
+                <p>5 === "5" : ${5 === "5"}</p>
+                <p>5 !== 3 : ${5 !== 3}</p>
+                <p>5 > 3 : ${5 > 3}</p>
+
+                <hr>
+
+                <h3>Operator Logika</h3>
+
+                <p>true && false = ${true && false}</p>
+                <p>true || false = ${true || false}</p>
+                <p>!true = ${!true}</p>
+
+                <hr>
+
+                <h3>Increment & Decrement</h3>
+
+                <p>Nilai akhir x = ${x}</p>
+            `;
+
+            console.log("Operator Aritmatika");
+            console.log(a + b);
+            console.log(a - b);
+            console.log(a * b);
+            console.log(a / b);
+            console.log(a % b);
+            console.log(a ** b);
+
+            console.log("Operator Perbandingan");
+            console.log(5 == "5");
+            console.log(5 === "5");
+            console.log(5 !== 3);
+            console.log(5 > 3);
+
+            console.log("Operator Logika");
+            console.log(true && false);
+            console.log(true || false);
+            console.log(!true);
+
+            console.log("Nilai akhir x =", x);
+        }
+
+    </script>
+
+</body>
+
+</html>

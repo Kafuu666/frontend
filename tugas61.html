@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 61 - DOM Selection</title>
+
+    <style>
+        .card {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="judul">Belajar DOM Selection</h1>
+
+    <button class="btn">
+        Tombol
+    </button>
+
+    <ul id="list">
+        <li class="item">HTML</li>
+        <li class="item">CSS</li>
+        <li class="item">JavaScript</li>
+    </ul>
+
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+
+    <p>Paragraf Pertama</p>
+    <p>Paragraf Kedua</p>
+
+    <button onclick="jalankanDOM()">
+        Jalankan Program
+    </button>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        function jalankanDOM() {
+
+            const el = document.getElementById("judul");
+
+            const btn = document.querySelector(".btn");
+
+            const item = document.querySelector("#list > li:first-child");
+
+            const items = document.querySelectorAll(".item");
+
+            items.forEach(item => {
+                item.style.color = "blue";
+            });
+
+            const cards = document.getElementsByClassName("card");
+
+            const paragraphs = document.getElementsByTagName("p");
+
+            const parent = el.parentElement;
+
+            const children = document.getElementById("list").children;
+
+            const first = document.getElementById("list").firstElementChild;
+
+            const last = document.getElementById("list").lastElementChild;
+
+            document.getElementById("hasil").innerHTML = `
+        <h3>Hasil DOM Selection</h3>
+
+        <p><b>ID:</b> ${el.textContent}</p>
+
+        <p><b>Query Selector:</b> ${btn.textContent}</p>
+
+        <p><b>First Item:</b> ${item.textContent}</p>
+
+        <p><b>Jumlah Card:</b> ${cards.length}</p>
+
+        <p><b>Jumlah Paragraf:</b> ${paragraphs.length}</p>
+
+        <p><b>Parent:</b> ${parent.tagName}</p>
+
+        <p><b>Jumlah Child List:</b> ${children.length}</p>
+
+        <p><b>Child Pertama:</b> ${first.textContent}</p>
+
+        <p><b>Child Terakhir:</b> ${last.textContent}</p>
+    `;
+
+            console.log(el);
+            console.log(btn);
+            console.log(item);
+            console.log(items);
+            console.log(cards);
+            console.log(paragraphs);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

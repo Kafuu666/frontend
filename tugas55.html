@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 55 - Loops</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Loops</h1>
+
+    <button onclick="jalankanLoop()">
+        Jalankan Program
+    </button>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        function jalankanLoop() {
+
+            let output = "<h3>Hasil Perulangan</h3>";
+
+            // For Loop
+            output += "<h4>For Loop</h4>";
+
+            for (let i = 0; i < 5; i++) {
+                output += i + "<br>";
+            }
+
+            // While Loop
+            output += "<h4>While Loop</h4>";
+
+            let angka = 0;
+
+            while (angka < 5) {
+                output += angka + "<br>";
+                angka++;
+            }
+
+            // For...of
+            output += "<h4>For...of (Array)</h4>";
+
+            const buah = ["Apel", "Mangga", "Jeruk"];
+
+            for (const item of buah) {
+                output += item + "<br>";
+            }
+
+            // For...in
+            output += "<h4>For...in (Object)</h4>";
+
+            const user = {
+                nama: "Andi",
+                umur: 25
+            };
+
+            for (const key in user) {
+                output += key + " : " + user[key] + "<br>";
+            }
+
+            // Break & Continue
+            output += "<h4>Break & Continue</h4>";
+
+            for (let i = 0; i < 10; i++) {
+
+                if (i === 3) continue;
+
+                if (i === 7) break;
+
+                output += i + "<br>";
+            }
+
+            document.getElementById("hasil").innerHTML = output;
+
+            console.log("Program selesai dijalankan.");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

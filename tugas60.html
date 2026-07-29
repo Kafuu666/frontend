@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 60 - Error Handling & Debugging</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Error Handling & Debugging</h1>
+
+    <button onclick="jalankanProgram()">
+        Jalankan Program
+    </button>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        function bagi(a, b) {
+
+            if (b === 0) {
+                throw new Error("Tidak bisa bagi dengan 0");
+            }
+
+            return a / b;
+        }
+
+        function jalankanProgram() {
+
+            let output = "";
+
+            try {
+
+                JSON.parse("bukan json");
+
+            } catch (error) {
+
+                output += `<p><b>Error JSON:</b> ${error.message}</p>`;
+                console.error(error.message);
+
+            } finally {
+
+                output += "<p>Finally selalu dijalankan.</p>";
+                console.log("Finally dijalankan.");
+
+            }
+
+            try {
+
+                output += `<p>10 ÷ 2 = ${bagi(10, 2)}</p>`;
+                output += `<p>10 ÷ 0 = ${bagi(10, 0)}</p>`;
+
+            } catch (error) {
+
+                output += `<p><b>Custom Error:</b> ${error.message}</p>`;
+
+            }
+
+            const array = ["Apel", "Mangga", "Jeruk"];
+
+            console.log("Debug:", array);
+
+            console.table(array);
+
+            console.time("proses");
+
+            for (let i = 0; i < 1000000; i++) {
+
+            }
+
+            console.timeEnd("proses");
+
+            // Aktifkan Developer Tools untuk menggunakan debugger
+            // debugger;
+
+            document.getElementById("hasil").innerHTML = output;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

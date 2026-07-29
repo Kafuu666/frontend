@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 59 - String Methods</title>
+</head>
+
+<body>
+
+    <h1>JavaScript String Methods</h1>
+
+    <button onclick="jalankanString()">
+        Jalankan Program
+    </button>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        function jalankanString() {
+
+            const teks = "Hello, World!";
+
+            let output = `
+        <h3>String Methods</h3>
+
+        <p><b>String:</b> ${teks}</p>
+
+        <p>Length : ${teks.length}</p>
+
+        <p>Uppercase : ${teks.toUpperCase()}</p>
+
+        <p>Lowercase : ${teks.toLowerCase()}</p>
+
+        <p>charAt(0) : ${teks.charAt(0)}</p>
+
+        <p>indexOf("World") : ${teks.indexOf("World")}</p>
+
+        <p>includes("World") : ${teks.includes("World")}</p>
+
+        <p>slice(0,5) : ${teks.slice(0, 5)}</p>
+
+        <p>replace() : ${teks.replace("World", "JS")}</p>
+
+        <p>split() : ${teks.split(", ")}</p>
+
+        <p>trim() : ${"   Hello, World!   ".trim()}</p>
+
+        <p>startsWith("Hello") : ${teks.startsWith("Hello")}</p>
+
+        <p>endsWith("!") : ${teks.endsWith("!")}</p>
+
+        <p>repeat(3) : ${teks.repeat(3)}</p>
+    `;
+
+            document.getElementById("hasil").innerHTML = output;
+
+            console.log(teks.length);
+            console.log(teks.toUpperCase());
+            console.log(teks.toLowerCase());
+            console.log(teks.charAt(0));
+            console.log(teks.indexOf("World"));
+            console.log(teks.includes("World"));
+            console.log(teks.slice(0, 5));
+            console.log(teks.replace("World", "JS"));
+            console.log(teks.split(", "));
+            console.log("   Hello, World!   ".trim());
+            console.log(teks.startsWith("Hello"));
+            console.log(teks.endsWith("!"));
+            console.log(teks.repeat(3));
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form dengan JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #hasil {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Form Input Data</h1>
+
+    <form id="form">
+
+        <input type="text" name="nama" placeholder="Masukkan nama" required>
+
+        <input type="email" name="email" placeholder="Masukkan email" required>
+
+        <button type="submit">
+            Kirim
+        </button>
+
+    </form>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        // Mengambil elemen form
+        const form = document.getElementById("form");
+
+        // Menambahkan event submit
+        form.addEventListener("submit", function (e) {
+
+            // Mencegah halaman refresh
+            e.preventDefault();
+
+            // Mengambil nilai input
+            const nama = form.nama.value;
+            const email = form.email.value;
+
+            // Menampilkan ke console
+            console.log("Nama :", nama);
+            console.log("Email:", email);
+
+            // Menampilkan alert
+            alert(
+                "Data berhasil dikirim!\n\n" +
+                "Nama : " + nama + "\n" +
+                "Email : " + email
+            );
+
+            // Menampilkan ke halaman
+            document.getElementById("hasil").innerHTML = `
+                <h3>Data yang Dimasukkan</h3>
+
+                <p><strong>Nama :</strong> ${nama}</p>
+
+                <p><strong>Email :</strong> ${email}</p>
+            `;
+
+            // Mengosongkan form
+            form.reset();
+
+        });
+
+    </script>
+
+</body>
+
+</html>

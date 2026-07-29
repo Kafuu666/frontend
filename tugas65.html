@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 65 - Event Delegation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        button {
+            margin-left: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Event Delegation</h1>
+
+    <ul id="todoList">
+
+        <li>
+            <span class="text">Belajar HTML</span>
+
+            <button class="edit-btn">Edit</button>
+
+            <button class="delete-btn">Hapus</button>
+        </li>
+
+        <li>
+            <span class="text">Belajar CSS</span>
+
+            <button class="edit-btn">Edit</button>
+
+            <button class="delete-btn">Hapus</button>
+        </li>
+
+        <li>
+            <span class="text">Belajar JavaScript</span>
+
+            <button class="edit-btn">Edit</button>
+
+            <button class="delete-btn">Hapus</button>
+        </li>
+
+    </ul>
+
+    <script>
+
+        const list = document.querySelector("#todoList");
+
+        list.addEventListener("click", (e) => {
+
+            if (e.target.matches(".delete-btn")) {
+
+                e.target.closest("li").remove();
+
+            }
+
+            if (e.target.matches(".edit-btn")) {
+
+                const li = e.target.closest("li");
+
+                const text = li.querySelector(".text");
+
+                const newText = prompt("Edit tugas:", text.textContent);
+
+                if (newText) {
+
+                    text.textContent = newText;
+
+                }
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

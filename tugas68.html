@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 68 - Creating Elements Dynamically</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Creating Elements Dynamically</h1>
+
+    <button id="tambahCard">
+        Tambah Card
+    </button>
+
+    <h2>Daftar Card</h2>
+
+    <div id="container"></div>
+
+    <h2>Daftar Nama</h2>
+
+    <ul id="list"></ul>
+
+    <script>
+
+        const container =
+            document.getElementById("container");
+
+        const list =
+            document.getElementById("list");
+
+        // Tombol tambah card
+        document
+            .getElementById("tambahCard")
+            .addEventListener("click", () => {
+
+                const judul = "Belajar JavaScript";
+
+                const deskripsi =
+                    "Materi Creating Elements Dynamically";
+
+                const card =
+                    document.createElement("div");
+
+                card.className = "card";
+
+                card.innerHTML = `
+        <h3>${judul}</h3>
+
+        <p>${deskripsi}</p>
+
+        <button class="btn">
+            Detail
+        </button>
+    `;
+
+                container.appendChild(card);
+
+            });
+
+        // DocumentFragment
+        const data = [
+
+            { nama: "Andi" },
+            { nama: "Budi" },
+            { nama: "Sinta" },
+            { nama: "Rina" }
+
+        ];
+
+        const fragment =
+            document.createDocumentFragment();
+
+        data.forEach(item => {
+
+            const li =
+                document.createElement("li");
+
+            li.textContent = item.nama;
+
+            fragment.appendChild(li);
+
+        });
+
+        list.appendChild(fragment);
+
+        // insertAdjacentHTML
+        container.insertAdjacentHTML(
+            "beforeend",
+            `
+    <div class="card">
+        <h3>Card dari insertAdjacentHTML()</h3>
+        <p>Card ini dibuat menggunakan HTML.</p>
+    </div>
+    `
+        );
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul JavaScript Dasar • Hari 51</title>
+</head>
+
+<body>
+
+    <h1>Modul JavaScript Dasar • Hari 51</h1>
+    <h2>Pengenalan JavaScript</h2>
+
+    <p>
+        JavaScript adalah bahasa pemrograman yang membuat website menjadi
+        interaktif dan dinamis.
+    </p>
+
+    <h3>1. Inline JavaScript (Tidak Disarankan)</h3>
+
+    <button onclick="alert('Hello!')">
+        Klik
+    </button>
+
+    <hr>
+
+    <h3>2. Internal JavaScript</h3>
+
+    <p>
+        JavaScript juga dapat ditulis langsung di dalam tag
+        <code>&lt;script&gt;</code>.
+    </p>
+
+    <hr>
+
+    <h3>3. External JavaScript (Disarankan)</h3>
+
+    <p>
+        Pada proyek besar, JavaScript sebaiknya dipisahkan ke file
+        <strong>script.js</strong>.
+    </p>
+
+    <hr>
+
+    <h3>Output JavaScript</h3>
+
+    <button onclick="tampilkanOutput()">
+        Tampilkan Output
+    </button>
+
+    <div id="hasil"></div>
+
+    <!-- Internal JavaScript -->
+    <script>
+        console.log("Hello, World!");
+
+        function tampilkanOutput() {
+
+            console.log("Console");
+
+            alert("Alert");
+
+            document.getElementById("hasil").innerHTML =
+                "<h4>Output document.write()</h4><p>Tulis</p>";
+
+        }
+    </script>
+
+</body>
+
+</html>

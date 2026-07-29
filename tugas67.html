@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 67 - Session Storage</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+        }
+
+        #hasil {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Session Storage</h1>
+
+    <button id="simpan">
+        Simpan Token
+    </button>
+
+    <button id="lihat">
+        Lihat Token
+    </button>
+
+    <button id="hapus">
+        Hapus Token
+    </button>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        const hasil =
+            document.getElementById("hasil");
+
+        // Simpan
+        document.getElementById("simpan")
+            .addEventListener("click", () => {
+
+                sessionStorage.setItem(
+                    "token",
+                    "abc123"
+                );
+
+                hasil.innerHTML =
+                    "<p>Token berhasil disimpan.</p>";
+
+            });
+
+        // Lihat
+        document.getElementById("lihat")
+            .addEventListener("click", () => {
+
+                const token =
+                    sessionStorage.getItem("token");
+
+                hasil.innerHTML =
+                    `<p>Token : ${token}</p>`;
+
+                console.log(token);
+
+            });
+
+        // Hapus
+        document.getElementById("hapus")
+            .addEventListener("click", () => {
+
+                sessionStorage.removeItem("token");
+
+                hasil.innerHTML =
+                    "<p>Token dihapus.</p>";
+
+            });
+
+        // Cookie
+        document.cookie =
+            "nama=Andi; max-age=86400; path=/";
+
+        console.log(document.cookie);
+
+        // URL Parameter
+        const params =
+            new URLSearchParams(window.location.search);
+
+        const id = params.get("id");
+
+        console.log("ID:", id);
+
+    </script>
+
+</body>
+
+</html>
