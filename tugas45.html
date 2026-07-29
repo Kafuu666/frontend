@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 45 - Responsive Design</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content {
+            flex: 3;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #dddddd;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        /* =========================
+           GRID
+        ========================= */
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #2196F3;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (min-width: 640px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* =========================
+           DESKTOP
+        ========================= */
+
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .sidebar {
+                display: block;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .card {
+                font-size: 16px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Design</h1>
+        <p>Contoh Media Queries dan Mobile-First</p>
+    </header>
+
+    <div class="container">
+
+        <div class="content">
+
+            <h2>Daftar Produk</h2>
+
+            <div class="grid">
+
+                <div class="card">Produk 1</div>
+                <div class="card">Produk 2</div>
+                <div class="card">Produk 3</div>
+                <div class="card">Produk 4</div>
+                <div class="card">Produk 5</div>
+                <div class="card">Produk 6</div>
+
+            </div>
+
+        </div>
+
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Sidebar hanya muncul pada layar desktop (≥1024px).</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

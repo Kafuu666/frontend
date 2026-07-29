@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 48 - CSS Scroll Snap</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        /* ==========================
+   JUDUL
+========================== */
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background: #2196F3;
+            color: white;
+        }
+
+        /* ==========================
+   HORIZONTAL SCROLL SNAP
+========================== */
+
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            gap: 20px;
+
+            padding: 20px;
+        }
+
+        .gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .gallery::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        .gallery-item {
+            flex: 0 0 100%;
+            scroll-snap-align: center;
+
+            height: 300px;
+            border-radius: 12px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .item1 {
+            background: #FF6B6B;
+        }
+
+        .item2 {
+            background: #4CAF50;
+        }
+
+        .item3 {
+            background: #2196F3;
+        }
+
+        .item4 {
+            background: #9C27B0;
+        }
+
+        /* ==========================
+   VERTICAL SCROLL SNAP
+========================== */
+
+        .sections {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        .section {
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-size: 45px;
+            font-weight: bold;
+
+            scroll-snap-align: start;
+        }
+
+        .s1 {
+            background: #FF9800;
+        }
+
+        .s2 {
+            background: #009688;
+        }
+
+        .s3 {
+            background: #3F51B5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Scroll Snap</h1>
+        <p>Contoh Horizontal & Vertical Scroll Snap</p>
+    </header>
+
+    <!-- ==========================
+     HORIZONTAL
+========================== -->
+
+    <h2 style="text-align:center; margin:30px;">
+        Horizontal Scroll Snap
+    </h2>
+
+    <div class="gallery">
+
+        <div class="gallery-item item1">
+            Slide 1
+        </div>
+
+        <div class="gallery-item item2">
+            Slide 2
+        </div>
+
+        <div class="gallery-item item3">
+            Slide 3
+        </div>
+
+        <div class="gallery-item item4">
+            Slide 4
+        </div>
+
+    </div>
+
+    <!-- ==========================
+     VERTICAL
+========================== -->
+
+    <div class="sections">
+
+        <section class="section s1">
+            Section 1
+        </section>
+
+        <section class="section s2">
+            Section 2
+        </section>
+
+        <section class="section s3">
+            Section 3
+        </section>
+
+    </div>
+
+</body>
+
+</html>

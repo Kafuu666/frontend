@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+
+    <style>
+        /* =========================
+           CSS Variables
+        ========================== */
+        :root {
+            --primary: #6C63FF;
+            --secondary: #3F3D56;
+            --accent: #FF6584;
+            --background: #F4F4F4;
+            --text-color: #333333;
+
+            --font-main: Arial, sans-serif;
+
+            --spacing: 16px;
+            --radius: 12px;
+
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            margin: 20px;
+            background: var(--background);
+            font-family: var(--font-main);
+            color: var(--text-color);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        section {
+            background: white;
+            padding: var(--spacing);
+            margin-bottom: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Button */
+        .button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: var(--spacing);
+            border-radius: var(--radius);
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            font-family: var(--font-main);
+        }
+
+        .button:hover {
+            background: var(--secondary);
+        }
+
+        /* Card */
+        .card {
+            padding: var(--spacing);
+            border-left: 6px solid var(--accent);
+            border-radius: var(--radius);
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        /* Box dengan fallback */
+        .box {
+            margin-top: 20px;
+            padding: var(--spacing);
+            border: 2px dashed var(--primary);
+
+            /* Jika --custom-color tidak ada,
+               maka warna menjadi hitam */
+            color: var(--custom-color, black);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar CSS Variables</h1>
+
+    <section>
+
+        <h2>1. Tombol</h2>
+
+        <a href="#" class="button">
+            Klik Saya
+        </a>
+
+    </section>
+
+    <section>
+
+        <h2>2. Card</h2>
+
+        <div class="card">
+            <h3>CSS Variables</h3>
+
+            <p>
+                Semua warna, jarak, bayangan, dan border-radius
+                menggunakan variabel yang didefinisikan di
+                <strong>:root</strong>.
+            </p>
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>3. Fallback Variable</h2>
+
+        <div class="box">
+            Variabel <strong>--custom-color</strong> belum dibuat,
+            sehingga warna teks menggunakan nilai fallback yaitu
+            <strong>black</strong>.
+        </div>
+
+    </section>
+
+</body>
+
+</html>

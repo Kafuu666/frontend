@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Areas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Grid Container */
+        .page {
+            display: grid;
+
+            grid-template-areas:
+                "header header header"
+                "sidebar main aside"
+                "footer footer footer";
+
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: 80px 1fr 70px;
+
+            min-height: 100vh;
+            gap: 10px;
+            padding: 15px;
+        }
+
+        /* Grid Areas */
+        .header {
+            grid-area: header;
+            background: #2196f3;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #4caf50;
+            color: white;
+            padding: 20px;
+        }
+
+        .main {
+            grid-area: main;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .aside {
+            grid-area: aside;
+            background: orange;
+            color: white;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        p {
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar CSS Grid Template Areas</h1>
+
+    <div class="page">
+
+        <header class="header">
+            <h2>HEADER</h2>
+        </header>
+
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+
+            <ul>
+                <li>Beranda</li>
+                <li>Profil</li>
+                <li>Galeri</li>
+                <li>Kontak</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <h2>Main Content</h2>
+
+            <p>
+                Area ini merupakan konten utama website.
+                Dengan <strong>grid-template-areas</strong>,
+                kita dapat menentukan posisi setiap bagian
+                layout hanya dengan memberi nama area.
+            </p>
+        </main>
+
+        <aside class="aside">
+            <h3>Aside</h3>
+
+            <p>
+                Area ini biasanya digunakan untuk
+                informasi tambahan, iklan, atau widget.
+            </p>
+        </aside>
+
+        <footer class="footer">
+            <p>Footer Website</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation - Hari 43</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* =======================
+           KEYFRAMES
+        ======================== */
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* =======================
+           CONTOH 1 : Fade In Up
+        ======================== */
+
+        .box {
+            width: 250px;
+            padding: 20px;
+            background: royalblue;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        /* =======================
+           CONTOH 2 : Pulse
+        ======================== */
+
+        .btn {
+            padding: 15px 30px;
+            background: tomato;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        /* =======================
+           CONTOH 3 : Slide In
+        ======================== */
+
+        .slide {
+            width: 250px;
+            padding: 20px;
+            background: seagreen;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+
+            animation: slideIn 1s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Animation @keyframes</h1>
+
+    <div class="box">
+        Fade In Up Animation
+    </div>
+
+    <button class="btn">
+        Pulse Animation
+    </button>
+
+    <div class="slide">
+        Slide In Animation
+    </div>
+
+</body>
+
+</html>

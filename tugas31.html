@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Dasar</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        /* Flex Container */
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            background-color: #e8f4ff;
+            padding: 20px;
+            border: 2px solid #2196f3;
+        }
+
+        /* Flex Item */
+        .item {
+            flex: 1;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 150px;
+
+            background-color: #6C63FF;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        /* align-self */
+        .item2 {
+            align-self: flex-end;
+            background-color: orange;
+        }
+
+        /* order */
+        .item3 {
+            order: -1;
+            background-color: crimson;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            background: #f0fff0;
+            border: 2px solid green;
+        }
+
+        .column div {
+            background: green;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar CSS Flexbox Dasar</h1>
+
+    <section>
+
+        <h2>1. Flex Direction Row</h2>
+
+        <div class="container">
+            <div class="item">Item 1</div>
+            <div class="item item2">Item 2</div>
+            <div class="item item3">Item 3 (Order -1)</div>
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>2. Flex Direction Column</h2>
+
+        <div class="column">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

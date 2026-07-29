@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Functions</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           calc()
+        ========================== */
+        .calc-box {
+            width: calc(100% - 40px);
+            height: calc(100vh - 500px);
+            background: #90caf9;
+            border: 2px solid #1976d2;
+            padding: 20px;
+        }
+
+        /* =========================
+           clamp()
+        ========================== */
+        .clamp-text {
+            font-size: clamp(1rem, 2.5vw, 2rem);
+            font-weight: bold;
+            color: #6C63FF;
+        }
+
+        /* =========================
+           min()
+        ========================== */
+        .min-box {
+            width: min(100%, 800px);
+            background: #c8e6c9;
+            border: 2px solid green;
+            padding: 20px;
+        }
+
+        /* =========================
+           max()
+        ========================== */
+        .max-box {
+            background: #ffe082;
+            padding: max(1rem, 5vw);
+            border: 2px solid orange;
+        }
+
+        /* =========================
+           attr()
+        ========================== */
+        .label::before {
+            content: attr(data-label);
+            display: block;
+            font-weight: bold;
+            color: crimson;
+            margin-bottom: 10px;
+        }
+
+        .label {
+            border: 2px dashed crimson;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar CSS Functions</h1>
+
+    <section>
+
+        <h2>1. calc()</h2>
+
+        <div class="calc-box">
+            Lebar menggunakan <strong>calc(100% - 40px)</strong>.
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>2. clamp()</h2>
+
+        <p class="clamp-text">
+            Ukuran teks akan menyesuaikan ukuran layar.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>3. min()</h2>
+
+        <div class="min-box">
+            Lebar maksimal elemen ini adalah <strong>800px</strong>,
+            tetapi tetap mengikuti ukuran layar jika lebih kecil.
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>4. max()</h2>
+
+        <div class="max-box">
+            Padding menggunakan <strong>max(1rem, 5vw)</strong>.
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>5. attr()</h2>
+
+        <div class="label" data-label="Label dari atribut HTML">
+            Isi dari elemen ini ditampilkan menggunakan fungsi
+            <strong>attr()</strong>.
+        </div>
+
+    </section>
+
+</body>
+
+</html>

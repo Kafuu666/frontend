@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 50 - CSS Best Practices</title>
+
+    <style>
+        /* ====================================
+   CSS VARIABLES
+==================================== */
+
+        :root {
+            --primary: #4F46E5;
+            --secondary: #6366F1;
+            --background: #F5F5F5;
+            --white: #FFFFFF;
+            --text: #333333;
+            --radius: 10px;
+            --spacing: 1rem;
+        }
+
+        /* ====================================
+   RESET
+==================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ====================================
+   BODY
+==================================== */
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            padding: 2rem;
+        }
+
+        /* ====================================
+   CONTAINER
+==================================== */
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* ====================================
+   TITLE
+==================================== */
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* ====================================
+   GRID LAYOUT
+==================================== */
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        /* Tablet */
+
+        @media(min-width:768px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop */
+
+        @media(min-width:1024px) {
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ====================================
+   BEM
+==================================== */
+
+        /* Block */
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+        }
+
+        /* Modifier */
+
+        .card--featured {
+            border: 3px solid var(--primary);
+        }
+
+        /* Element */
+
+        .card__image {
+            height: 180px;
+            background: var(--secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .card__body {
+            padding: var(--spacing);
+        }
+
+        .card__title {
+            margin-bottom: .8rem;
+        }
+
+        .card__text {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Element + Modifier */
+
+        .card__button--primary {
+            display: inline-block;
+            padding: .8rem 1.2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .card__button--primary:hover {
+            opacity: .9;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Best Practices</h1>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card__image">
+                    Gambar
+                </div>
+
+                <div class="card__body">
+
+                    <h2 class="card__title">
+                        Card Biasa
+                    </h2>
+
+                    <p class="card__text">
+                        Contoh card menggunakan metodologi
+                        BEM (Block Element Modifier).
+                    </p>
+
+                    <a href="#" class="card__button--primary">
+                        Selengkapnya
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="card card--featured">
+
+                <div class="card__image">
+                    Featured
+                </div>
+
+                <div class="card__body">
+
+                    <h2 class="card__title">
+                        Featured Card
+                    </h2>
+
+                    <p class="card__text">
+                        Card ini memiliki modifier
+                        <strong>card--featured</strong>.
+                    </p>
+
+                    <a href="#" class="card__button--primary">
+                        Baca
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card__image">
+                    Produk
+                </div>
+
+                <div class="card__body">
+
+                    <h2 class="card__title">
+                        Card Ketiga
+                    </h2>
+
+                    <p class="card__text">
+                        Layout menggunakan CSS Grid,
+                        sedangkan isi card menggunakan Flexbox sederhana.
+                    </p>
+
+                    <a href="#" class="card__button--primary">
+                        Detail
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

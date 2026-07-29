@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Z-Index & Stacking</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Parent */
+        .container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: auto;
+            border: 2px dashed gray;
+            background: #fafafa;
+        }
+
+        /* Box Bawah */
+        .box1 {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 180px;
+            height: 120px;
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            line-height: 120px;
+            z-index: 1;
+        }
+
+        /* Box Tengah */
+        .box2 {
+            position: absolute;
+            top: 80px;
+            left: 100px;
+            width: 180px;
+            height: 120px;
+            background: orange;
+            color: white;
+            text-align: center;
+            line-height: 120px;
+            z-index: 2;
+        }
+
+        /* Box Atas */
+        .box3 {
+            position: absolute;
+            top: 120px;
+            left: 160px;
+            width: 180px;
+            height: 120px;
+            background: crimson;
+            color: white;
+            text-align: center;
+            line-height: 120px;
+            z-index: 3;
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 220px;
+            padding: 15px;
+            background: navy;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #2196F3;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 100;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            top: 70px;
+            left: 20px;
+            background: #555;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            z-index: 50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar CSS Z-Index & Stacking</h1>
+
+    <div class="modal">
+        Modal (z-index: 1000)
+    </div>
+
+    <section>
+
+        <h2>Contoh Z-Index</h2>
+
+        <div class="container">
+
+            <div class="dropdown">
+                Dropdown (100)
+            </div>
+
+            <div class="tooltip">
+                Tooltip (50)
+            </div>
+
+            <div class="box1">
+                Box 1 (z-index:1)
+            </div>
+
+            <div class="box2">
+                Box 2 (z-index:2)
+            </div>
+
+            <div class="box3">
+                Box 3 (z-index:3)
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

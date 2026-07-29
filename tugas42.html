@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .box {
+            width: 140px;
+            height: 140px;
+            background: #6C63FF;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+
+        /* Translate */
+        .translate-x:hover {
+            transform: translateX(50px);
+        }
+
+        .translate-y:hover {
+            transform: translateY(-20px);
+        }
+
+        .translate:hover {
+            transform: translate(50px, -20px);
+        }
+
+        /* Rotate */
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        .rotate2:hover {
+            transform: rotate(-90deg);
+        }
+
+        /* Scale */
+        .scale:hover {
+            transform: scale(1.2);
+        }
+
+        .scalex:hover {
+            transform: scaleX(1.5);
+        }
+
+        /* Skew */
+        .skew:hover {
+            transform: skewX(10deg);
+        }
+
+        /* Combination */
+        .combine:hover {
+            transform: translate(-20px, -10px) scale(1.1);
+        }
+
+        /* Transform Origin */
+        .origin {
+            transform-origin: top left;
+        }
+
+        .origin:hover {
+            transform: rotate(30deg);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Belajar CSS Transforms</h1>
+
+    <section>
+
+        <h2>Arahkan Mouse ke Setiap Kotak</h2>
+
+        <div class="container">
+
+            <div class="box translate-x">
+                translateX
+            </div>
+
+            <div class="box translate-y">
+                translateY
+            </div>
+
+            <div class="box translate">
+                translate()
+            </div>
+
+            <div class="box rotate">
+                rotate(45°)
+            </div>
+
+            <div class="box rotate2">
+                rotate(-90°)
+            </div>
+
+            <div class="box scale">
+                scale()
+            </div>
+
+            <div class="box scalex">
+                scaleX()
+            </div>
+
+            <div class="box skew">
+                skewX()
+            </div>
+
+            <div class="box combine">
+                Kombinasi
+            </div>
+
+            <div class="box origin">
+                Origin
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

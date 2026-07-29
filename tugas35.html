@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float & Clear</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        /* Float */
+        .image {
+            float: left;
+            width: 200px;
+            height: 140px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            line-height: 140px;
+            margin: 0 20px 20px 0;
+            font-weight: bold;
+        }
+
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Clear */
+        .clear {
+            clear: both;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #E3F2FD;
+            border: 1px solid #2196F3;
+        }
+
+        /* Multi-column */
+        .article {
+            columns: 3;
+            column-gap: 2rem;
+            column-rule: 2px solid #ddd;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar Float & Clear</h1>
+
+    <section>
+
+        <h2>1. Float</h2>
+
+        <div class="clearfix">
+
+            <div class="image">
+                Gambar
+            </div>
+
+            <p>
+                Float digunakan untuk membuat elemen berpindah ke kiri atau ke
+                kanan sehingga teks dapat mengelilinginya. Sebelum Flexbox dan
+                CSS Grid populer, teknik ini sering digunakan untuk membuat
+                layout website.
+            </p>
+
+            <p>
+                Pada contoh ini, kotak hijau berada di sebelah kiri, sedangkan
+                paragraf mengalir mengikuti sisi kanan gambar.
+            </p>
+
+        </div>
+
+        <div class="clear">
+            Elemen ini menggunakan <strong>clear: both;</strong> sehingga tampil
+            di bawah elemen yang di-float.
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>2. Multi Column Layout</h2>
+
+        <div class="article">
+            CSS juga menyediakan fitur Multi-column Layout yang memungkinkan
+            sebuah teks dibagi menjadi beberapa kolom seperti pada koran atau
+            majalah. Dengan properti <strong>columns</strong>, browser akan
+            secara otomatis membagi isi menjadi beberapa kolom. Properti
+            <strong>column-gap</strong> digunakan untuk mengatur jarak antar
+            kolom, sedangkan <strong>column-rule</strong> digunakan untuk
+            memberikan garis pemisah antar kolom sehingga tampilannya lebih
+            rapi dan mudah dibaca.
+        </div>
+
+    </section>
+
+</body>
+
+</html>

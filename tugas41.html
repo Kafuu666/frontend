@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        }
+
+        /* =========================
+           Button Transition
+        ========================== */
+
+        .button {
+            display: inline-block;
+            background: #6C63FF;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+
+            transition: all .3s ease;
+        }
+
+        .button:hover {
+            background: #5B52EE;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(108, 99, 255, .4);
+        }
+
+        /* =========================
+           Card Transition
+        ========================== */
+
+        .card {
+            width: 300px;
+            padding: 20px;
+            margin-top: 20px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                background .5s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: #eef2ff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+        }
+
+        /* =========================
+           Image Transition
+        ========================== */
+
+        .image {
+            width: 300px;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+
+            transition: transform .5s ease;
+        }
+
+        .image:hover {
+            transform: rotate(3deg) scale(1.08);
+        }
+
+        /* =========================
+           Box Transition
+        ========================== */
+
+        .box {
+            width: 120px;
+            height: 120px;
+            background: #ff9800;
+            border-radius: 10px;
+
+            transition: width .5s ease,
+                background .5s ease;
+        }
+
+        .box:hover {
+            width: 250px;
+            background: #f44336;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Belajar CSS Transitions</h1>
+
+    <section>
+
+        <h2>1. Button Transition</h2>
+
+        <a href="#" class="button">Klik Saya</a>
+
+    </section>
+
+    <section>
+
+        <h2>2. Card Transition</h2>
+
+        <div class="card">
+            <h3>CSS Transition</h3>
+
+            <p>
+                Arahkan mouse ke card ini untuk melihat
+                perubahan ukuran, warna, dan bayangan.
+            </p>
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>3. Image Transition</h2>
+
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Pemandangan Alam"
+            class="image">
+
+    </section>
+
+    <section>
+
+        <h2>4. Box Transition</h2>
+
+        <div class="box"></div>
+
+    </section>
+
+</body>
+
+</html>

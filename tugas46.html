@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari 46 - CSS Pseudo-classes Lanjutan</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* ======================
+           STRUCTURAL
+        ====================== */
+
+        ul {
+            list-style: none;
+            border: 1px solid #ccc;
+        }
+
+        li {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        li:first-child {
+            font-weight: bold;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li:nth-child(2n) {
+            background: #f5f5f5;
+        }
+
+        li:nth-child(3n+1) {
+            color: blue;
+        }
+
+        /* ======================
+           LINK STATES
+        ====================== */
+
+        a {
+            text-decoration: none;
+            color: royalblue;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: darkred;
+        }
+
+        /* ======================
+           INPUT STATES
+        ====================== */
+
+        input {
+            width: 300px;
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid #999;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: blue;
+        }
+
+        input:disabled {
+            opacity: .5;
+        }
+
+        input:valid {
+            border-color: green;
+        }
+
+        input:invalid {
+            border-color: red;
+        }
+
+        input:placeholder-shown {
+            border-color: gray;
+        }
+
+        /* Checkbox */
+
+        input:checked+label {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* ======================
+           NOT
+        ====================== */
+
+        p:not(.special) {
+            color: gray;
+        }
+
+        .special {
+            color: purple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Pseudo-classes Lanjutan</h1>
+
+    <!-- Structural -->
+    <section>
+
+        <h2>1. Structural Pseudo-class</h2>
+
+        <ul>
+            <li>Item Pertama (Bold)</li>
+            <li>Item Kedua (Background Abu)</li>
+            <li>Item Ketiga</li>
+            <li>Item Keempat (Biru)</li>
+            <li>Item Kelima</li>
+            <li>Item Keenam (Background Abu)</li>
+        </ul>
+
+    </section>
+
+    <!-- Link -->
+    <section>
+
+        <h2>2. Link States</h2>
+
+        <a href="#">Arahkan atau klik link ini</a>
+
+    </section>
+
+    <!-- Input -->
+    <section>
+
+        <h2>3. Input States</h2>
+
+        <input type="text" placeholder="Masukkan nama">
+
+        <br>
+
+        <input type="email" placeholder="Masukkan email" required>
+
+        <br>
+
+        <input type="text" value="Input Disabled" disabled>
+
+        <br><br>
+
+        <input type="checkbox" id="setuju">
+
+        <label for="setuju">
+            Saya menyetujui syarat dan ketentuan
+        </label>
+
+    </section>
+
+    <!-- Not -->
+    <section>
+
+        <h2>4. :not()</h2>
+
+        <p>Paragraf biasa akan berwarna abu-abu.</p>
+
+        <p class="special">
+            Paragraf ini memiliki class "special".
+        </p>
+
+        <p>Paragraf biasa lainnya.</p>
+
+    </section>
+
+</body>
+
+</html>
